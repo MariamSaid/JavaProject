@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello Spring boot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Top 10 rows in the dataset</h1>
+            <!--<a href="rest">Take a rest</a>-->
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <!--                    <th>Title</th>
+                                        <th>Company</th>
+                                        <th>Location</th>
+                                        <th>Type</th>
+                                        <th>Level</th>
+                                        <th>YearsExp</th>
+                                        <th>Country</th>
+                                          <th>Skill</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="area : ${message}">
+                    <td th:text="${area[0]}">&nbsp;</td>
+                    <td th:text="${area[1]}">&nbsp;</td>
+                    <td th:text="${area[2]}">&nbsp;</td>
+                    <td th:text="${area[3]}">&nbsp;</td>
+                    <td th:text="${area[4]}">&nbsp;</td>
+                    <td th:text="${area[5]}">&nbsp;</td>
+                    <td th:text="${area[6]}">&nbsp;</td>
+                    <td th:text="${area[7]}">&nbsp;</td>
+                    <!--                    <td th:text="${area.value}">&nbsp;</td>-->
+                </tr>
+            </tbody>
+        </table>
+        <div  style="width: 55% "  > 
+            <!--                <a href="Head" class="button" >Head</a>-->
+            <a href="Summary" class="button" >Summary</a>
+            <a href="Company" class="button" >Company</a>
+            <a href="Title" class="button" >Title</a>
+            <a href="Area" class="button">Area</a> 
+            <a href="Skill" class="button">Skills</a> 
+            <a href="YearExp" class="button">YearsExp</a>
+            <a href="KMean" class="button">KMeans Clustring</a>
+        </div>
+
+    </body>   
+</html>

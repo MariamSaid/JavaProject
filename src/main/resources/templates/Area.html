@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello Spring boot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <div>
+            <h1>Area & Counts</h1>
+            <!--<a href="rest">Take a rest</a>-->
+        </div>
+        <div style="width: 100%">
+
+            <div class="col-md-6">
+                <table class="table table-responsive pull-right pro-page-contact-details-table">
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="area : ${message}">
+                            <td th:text="${area.key}">&nbsp;</td>
+                            <td th:text="${area.value}">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <img src = "\areaChart.jpg" height="450px" width="600px" alt="alt"/>
+            </div>
+        </div> 
+        <div  style="width: 55% "  > 
+            <a href="Head" class="button" >Head</a>
+            <a href="Summary" class="button" >Summary</a>
+            <a href="Company" class="button" >Company</a>
+            <a href="Title" class="button" >Title</a>
+            <!--                <a href="Area" class="button">Area</a> -->
+            <a href="Skill" class="button">Skills</a> 
+            <a href="YearExp" class="button">YearsExp</a>
+            <a href="KMean" class="button">KMeans Clustring</a>
+
+        </div>
+    </body>   
+</html>

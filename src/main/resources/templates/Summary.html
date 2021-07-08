@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello Spring boot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <style>
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<table class="table table-responsive pull-right pro-page-contact-details-table">-->
+        <table class="table">
+
+            <tbody>
+
+                <tr th:each="area: ${message1}">
+                    <th>Column </th>
+                    <td th:text="${area.get(0)}">&nbsp;</td>
+                    <td th:text="${area.get(1)}">&nbsp;</td>
+                    <td th:text="${area.get(2)}">&nbsp;</td>
+                    <td th:text="${area.get(3)}">&nbsp;</td> 
+                    <td th:text="${area.get(4)}">&nbsp;</td>
+                    <td th:text="${area.get(5)}">&nbsp;</td>
+                    <td th:text="${area.get(6)}">&nbsp;</td>
+                    <td th:text="${area.get(7)}">&nbsp;</td>
+                </tr>
+                <tr th:each="area: ${message2}">
+                    <th>Type </th>
+                    <td th:text="${area.get(0)}">&nbsp;</td>
+                    <td th:text="${area.get(1)}">&nbsp;</td>
+                    <td th:text="${area.get(2)}">&nbsp;</td>
+                    <td th:text="${area.get(3)}">&nbsp;</td> 
+                    <td th:text="${area.get(4)}">&nbsp;</td>
+                    <td th:text="${area.get(5)}">&nbsp;</td>
+                    <td th:text="${area.get(6)}">&nbsp;</td>
+                    <td th:text="${area.get(7)}">&nbsp;</td>
+                </tr>
+                <tr th:each="area: ${message3}">
+                    <th>Measure </th>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div  style= "width: 70%; padding-top: 5%;   margin: auto auto; margin-top: 10px;      "> 
+            <a href="Head" class="button" >Head</a><!--
+            <!--                <a href="Summary" class="button" >Summary</a>-->
+            <a href="Company" class="button" >Company</a>
+            <a href="Title" class="button" >Title</a>
+            <a href="Area" class="button">Area</a> 
+            <a href="Skill" class="button">Skills</a>
+            <a href="YearExp" class="button">YearsExp</a>
+            <a href="KMean" class="button">KMeans Clustring</a>
+
+        </div>
+    </body>   
+</html>
